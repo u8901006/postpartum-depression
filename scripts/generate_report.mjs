@@ -117,8 +117,17 @@ function robustJsonParse(text) {
 }
 
 function buildPrompt(papersData, dateStr) {
-  const paperCount = papersData.count || 0;
-  const papersText = JSON.stringify(papersData.papers || [], null, 2);
+  const allPapers = papersData.papers || [];
+  const papers = allPapers.slice(0, 30).map((p) => ({
+    pmid: p.pmid,
+    title: p.title,
+    journal: p.journal,
+    abstract: (p.abstract || '').slice(0, 500),
+    url: p.url,
+    keywords: p.keywords,
+  }));
+  const paperCount = papers.length;
+  const papersText = JSON.stringify(papers, null, 2);
   const tagsList = PPD_TAGS.join('、');
 
   return `以下是 ${dateStr} 從 PubMed 抓取的最新產後憂鬱症（PPD）相關文獻（共 ${paperCount} 篇）。
@@ -201,6 +210,9 @@ async function analyzePapers(apiKey, papersData, dateStr) {
             max_tokens: 50000,
           }),
           signal: AbortSignal.timeout(480000),
+        }).catch((err) => {
+          console.error(`[ERROR] fetch ${model} network error: ${err.cause?.message || err.message}`);
+          throw err;
         });
 
         if (resp.status === 429) {
