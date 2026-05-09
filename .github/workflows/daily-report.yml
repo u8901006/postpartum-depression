@@ -1,0 +1,90 @@
+name: PPD Daily Report
+
+on:
+  schedule:
+    - cron: "40 14 * * *"  # UTC 14:40 = GMT+8 22:40
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Target date (YYYY-MM-DD), leave empty for today"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Determine date
+        id: date
+        run: |
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            echo "target=${{ github.event.inputs.date }}" >> "$GITHUB_OUTPUT"
+          else
+            TARGET=$(TZ=Asia/Taipei date +%Y-%m-%d)
+            echo "target=$TARGET" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch papers from PubMed
+        run: |
+          node scripts/fetch_papers.mjs \
+            --days 7 \
+            --max-papers 50 \
+            --output papers.json
+        continue-on-error: true
+
+      - name: Check papers data
+        id: papers
+        run: |
+          if [ -f papers.json ] && grep -q '"count"' papers.json; then
+            COUNT=$(node -e "const d=JSON.parse(require('fs').readFileSync('papers.json','utf-8'));console.log(d.count)")
+            echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          else
+            echo "count=0" >> "$GITHUB_OUTPUT"
+            echo '{"date":"${{ steps.date.outputs.target }}","count":0,"papers":[]}' > papers.json
+          fi
+
+      - name: Generate report with Zhipu AI
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+        run: |
+          node scripts/generate_report.mjs \
+            --input papers.json \
+            --output "docs/ppd-${{ steps.date.outputs.target }}.html" \
+            --date "${{ steps.date.outputs.target }}"
+
+      - name: Generate index page
+        run: node scripts/generate_index.mjs
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "ppd daily report: ${{ steps.date.outputs.target }}"
+          git pull --rebase origin main
+          git push
+
+      - name: Summary
+        run: |
+          echo "### PPD Daily Report" >> "$GITHUB_STEP_SUMMARY"
+          echo "**Date:** ${{ steps.date.outputs.target }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "**Papers analyzed:** ${{ steps.papers.outputs.count }}" >> "$GITHUB_STEP_SUMMARY"
