@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PPD Research Daily &middot; 產後憂鬱症研究文獻日報 &middot; 2026年6月23日</title>
+<meta name="description" content="2026年6月23日 產後憂鬱症研究文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root{--bg:#f6f1e8;--surface:#fffaf2;--line:#d8c5ab;--text:#2b2118;--muted:#766453;--accent:#8c4f2b;--accent-soft:#ead2bf;--card-bg:color-mix(in srgb,var(--surface) 92%,white)}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(circle at top,#fff6ea 0,var(--bg) 55%,#ead8c6 100%);color:var(--text);font-family:"Noto Sans TC","PingFang TC","Helvetica Neue",Arial,sans-serif;min-height:100vh;overflow-x:hidden}
+  .container{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:60px 32px 80px}
+  header{display:flex;align-items:center;gap:16px;margin-bottom:52px;animation:fadeDown .6s ease both}
+  .logo{width:48px;height:48px;border-radius:14px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 20px rgba(140,79,43,.25)}
+  .header-text h1{font-size:22px;font-weight:700;color:var(--text);letter-spacing:-.3px}
+  .header-meta{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;align-items:center}
+  .badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;letter-spacing:.3px}
+  .badge-date{background:var(--accent-soft);border:1px solid var(--line);color:var(--accent)}
+  .badge-count{background:rgba(140,79,43,.06);border:1px solid var(--line);color:var(--muted)}
+  .badge-source{background:transparent;color:var(--muted);font-size:11px;padding:0 4px}
+  .summary-card{background:var(--card-bg);border:1px solid var(--line);border-radius:24px;padding:28px 32px;margin-bottom:32px;box-shadow:0 20px 60px rgba(61,36,15,.06);animation:fadeUp .5s ease .1s both}
+  .summary-card h2{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--accent);margin-bottom:16px}
+  .summary-text{font-size:15px;line-height:1.8;color:var(--text)}
+  .section{margin-bottom:36px;animation:fadeUp .5s ease both}
+  .section-title{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:700;color:var(--text);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .section-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;background:var(--accent-soft)}
+  .news-card{background:var(--card-bg);border:1px solid var(--line);border-radius:24px;padding:22px 26px;margin-bottom:12px;box-shadow:0 8px 30px rgba(61,36,15,.04);transition:background .2s,border-color .2s,transform .2s}
+  .news-card:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(61,36,15,.08)}
+  .news-card.featured{border-left:3px solid var(--accent)}
+  .news-card.featured:hover{border-color:var(--accent)}
+  .card-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  .rank-badge{background:var(--accent);color:#fff7f0;font-weight:700;font-size:12px;padding:2px 8px;border-radius:6px}
+  .emoji-icon{font-size:18px}
+  .card-header-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .emoji-sm{font-size:14px}
+  .news-card h3{font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.5}
+  .journal-source{font-size:12px;color:var(--accent);margin-bottom:8px;opacity:.8}
+  .news-card p{font-size:13.5px;line-height:1.75;color:var(--muted)}
+  .card-footer{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .tag{padding:2px 9px;background:var(--accent-soft);border-radius:999px;font-size:11px;color:var(--accent)}
+  .news-card a{font-size:12px;color:var(--accent);text-decoration:none;opacity:.7;margin-left:auto}
+  .news-card a:hover{opacity:1}
+  .utility-high{color:#5a7a3a;font-size:11px;font-weight:600;padding:2px 8px;background:rgba(90,122,58,.1);border-radius:4px}
+  .utility-mid{color:#9f7a2e;font-size:11px;font-weight:600;padding:2px 8px;background:rgba(159,122,46,.1);border-radius:4px}
+  .utility-low{color:var(--muted);font-size:11px;font-weight:600;padding:2px 8px;background:rgba(118,100,83,.08);border-radius:4px}
+  .utility-sm{font-size:10px}
+  .pico-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;padding:12px;background:rgba(255,253,249,.8);border-radius:14px;border:1px solid var(--line)}
+  .pico-item{display:flex;gap:8px;align-items:baseline}
+  .pico-label{font-size:10px;font-weight:700;color:#fff7f0;background:var(--accent);padding:2px 6px;border-radius:4px;flex-shrink:0}
+  .pico-text{font-size:12px;color:var(--muted);line-height:1.4}
+  .keywords-section{margin-bottom:36px}
+  .keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .keyword{padding:5px 14px;background:var(--accent-soft);border:1px solid var(--line);border-radius:20px;font-size:12px;color:var(--accent);cursor:default;transition:background .2s}
+  .keyword:hover{background:rgba(140,79,43,.18)}
+  .topic-section{margin-bottom:36px}
+  .topic-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .topic-name{font-size:13px;color:var(--muted);width:100px;flex-shrink:0;text-align:right}
+  .topic-bar-bg{flex:1;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+  .topic-bar{height:100%;background:linear-gradient(90deg,var(--accent),#c47a4a);border-radius:4px;transition:width .6s ease}
+  .topic-count{font-size:12px;color:var(--accent);width:24px}
+  .links-banner{margin-top:48px;animation:fadeUp .5s ease .4s both}
+  .links-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .link-card{display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--card-bg);border:1px solid var(--line);border-radius:24px;text-decoration:none;color:var(--text);transition:all .2s;box-shadow:0 8px 30px rgba(61,36,15,.04)}
+  .link-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 12px 40px rgba(61,36,15,.08)}
+  .link-icon{font-size:28px;flex-shrink:0}
+  .link-info{flex:1}
+  .link-title{font-size:14px;font-weight:700;color:var(--text)}
+  .link-desc{font-size:11px;color:var(--muted);margin-top:2px}
+  .link-arrow{font-size:18px;color:var(--accent);font-weight:700}
+  footer{margin-top:32px;padding-top:22px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);display:flex;justify-content:space-between;animation:fadeUp .5s ease .5s both}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  @keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  @media(max-width:700px){.container{padding:36px 18px 60px}.summary-card,.news-card{padding:20px 18px}.pico-grid{grid-template-columns:1fr}.topic-name{width:70px;font-size:11px}footer{flex-direction:column;gap:6px;text-align:center}.links-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🤱</div>
+    <div class="header-text">
+      <h1>PPD Research Daily &middot; 產後憂鬱症研究文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年6月23日</span>
+        <span class="badge badge-count">📊 7 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於PPD的篩檢實務與社會環境風險因子，EPDS大樣本回顧性研究揭示了篩檢後的高風險族群求助行為障礙，而氣候災害與親密伴侶暴力（IPV）則凸顯了環境壓力對圍產期心理健康的深遠影響。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">📋</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>愛丁堡產後憂鬱量表篩檢後的產後憂鬱症危險因子與求助行為：586名患者回顧性研究</h3>
+  <p class="journal-source">Journal of Affective Disorders &middot; Risk factors and help-seeking behavior for postpartum depression following Edinburgh postnatal depression scale screening: A retrospective study of 586 patients.</p>
+  <p>針對586名產後婦女進行EPDS分層分析，發現高風險族群（EPDS≥13）的求助行為顯著低落，且早產與低Apgar評分為獨立危險因子，顯示篩檢後的轉介機制仍有重大缺口。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">586名接受EPDS篩檢的產後婦女</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">依EPDS分數分為低風險（≤9）、輕度風險（10-12）、高風險（≥13）三組進行追蹤</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同風險分層間的危險因子與求助行為差異</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">高風險族群求助意願顯著降低；早產與低Apgar評分為PPD獨立危險因子</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">篩檢與診斷</span><span class="tag">流行病學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42323986/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">🌊</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>2024年巴西南部洪水對孕產婦產科與心理健康結果的影響</h3>
+  <p class="journal-source">Archives of Women's Mental Health &middot; Impact of the 2024 South Brazilian flood on obstetric and mental health outcomes in pregnant women.</p>
+  <p>針對274名產後婦女的橫斷面研究顯示，洪水導致的住房損失與經濟援助需求顯著與PPD症狀相關，為氣候災害下圍產期心理健康介入提供實證基礎。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">274名於2024年巴西南部洪水後8-12個月分娩的產後婦女</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">評估三種災害暴露：需經濟援助、住房受損或遷移、洪災後九個月內分娩</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同災害暴露程度與產後心理健康及產科結果的關聯</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">住房受損/遷移與需經濟援助皆顯著預測PPD症狀加重</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">公共衛生</span><span class="tag">流行病學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42322363/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">💔</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>巴基斯坦女性親密伴侶暴力與產後憂鬱症：流產的調節角色</h3>
+  <p class="journal-source">Journal of Interpersonal Violence &middot; Intimate Partner Violence and Postpartum Depression Among Pakistani Women: Moderating Role of Miscarriages.</p>
+  <p>本研究發現IPV顯著增加巴基斯坦婦女PPD風險，而有流產經驗者此關聯性更為強烈，凸顯了多重創傷疊加對產後心理健康的加乘效應。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">巴基斯坦產後婦女</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">評估IPV暴露、流產史與PPD之間的關係</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">有無流產經驗的婦女中，IPV對PPD影響的差異</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">IPV與PPD顯著正相關；流產經驗作為調節變項強化了此關聯</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">社會文化因素</span><span class="tag">跨文化研究</span><span class="tag">伴侶與家庭</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/40886055/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">👶</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>產前暴露於親密伴侶暴力與兒童創傷後壓力症狀</h3>
+  <p class="journal-source">Journal of Interpersonal Violence &middot; Prenatal Exposure to Intimate Partner Violence and Children's Posttraumatic Stress Symptoms.</p>
+  <p>次級資料分析顯示，母親孕期遭受IPV與子女後續創傷後壓力症狀顯著相關，強調產前IPV篩檢不僅保護母親，更是預防下一代心理創傷的關鍵切入點。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">有創傷經驗的兒童及其母親</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">回顧性評估母親孕期IPV暴露與兒童創傷後壓力症狀的關聯</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">有無產前IPV暴露的兒童其創傷後壓力症狀嚴重程度差異</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">產前IPV暴露顯著預測兒童較高的創傷後壓力症狀</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">兒少精神醫學</span><span class="tag">伴侶與家庭</span><span class="tag">嬰兒發展</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/40692363/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>圍產期心理健康研究：來自英國神經多樣性樣本的優先事項</h3>
+  <p class="journal-source">Archives of Women's Mental Health &middot; Perinatal mental health research: priorities from a neurodiverse sample in the United Kingdom.</p>
+  <p>WANDA研究共邀709名參與者（含神經典型與神經多樣性者）共創研究議題，發現神經多樣性族群在圍產期心理健康需求上有顯著差異，呼籲未來研究應納入此群體的特定觀點。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">709名英國參與者（含神經典型與神經多樣性者）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">共設計混合方法調查，量化評分與質性回饋並行</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">神經典型與神經多樣性參與者對圍產期心理健康研究優先事項的排序差異</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">兩族群對研究優先事項排序存在差異，介入措施研發均列為首位</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">社會文化因素</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42329297/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div></div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🔬</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>產後免疫激活與成年情感脆弱性：囓齒類模型中行為與膠質細胞結果的系統性回顧</h3>
+  <p class="journal-source">Neuroscience and Biobehavioral Reviews</p>
+  <p>系統性回顧整合囓齒類產後免疫挑戰模型，發現早期免疫激活透過膠質細胞反應性改變，長期影響焦慮與憂鬱樣行為，為PPD的神經免疫機制提供基礎科學證據。</p>
+  <div class="card-footer">
+    <span class="tag">神經科學</span><span class="tag">系統性回顧</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42323117/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">😴</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>美國HIV感染者依生殖階段區分之睡眠品質：HOPE研究</h3>
+  <p class="journal-source">Journal of Acquired Immune Deficiency Syndromes</p>
+  <p>HOPE觀察性研究顯示HIV感染女性在不同生殖階段（未生育、產前、產後）的睡眠品質差異，產後階段睡眠問題較為突出，但非直接以PPD為主要終點。</p>
+  <div class="card-footer">
+    <span class="tag">睡眠醫學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/41962148/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div></div>
+
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+  <span class="topic-name">篩檢與診斷</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+  <span class="topic-count">1</span>
+</div><div class="topic-row">
+  <span class="topic-name">社會文化因素</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+  <span class="topic-count">2</span>
+</div><div class="topic-row">
+  <span class="topic-name">公共衛生</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+  <span class="topic-count">1</span>
+</div><div class="topic-row">
+  <span class="topic-name">兒少精神醫學</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+  <span class="topic-count">1</span>
+</div><div class="topic-row">
+  <span class="topic-name">神經科學</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+  <span class="topic-count">1</span>
+</div><div class="topic-row">
+  <span class="topic-name">睡眠醫學</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+  <span class="topic-count">1</span>
+</div></div>
+
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">EPDS篩檢</span><span class="keyword">親密伴侶暴力</span><span class="keyword">氣候災害</span><span class="keyword">神經多樣性</span><span class="keyword">求助行為</span><span class="keyword">危險因子分層</span></div></div>
+
+  <div class="links-banner">
+    <div class="links-grid">
+      <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">🏥</span>
+        <span class="link-info">
+          <span class="link-title">李政洋身心診所</span>
+          <span class="link-desc">診所首頁</span>
+        </span>
+        <span class="link-arrow">&rarr;</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">📰</span>
+        <span class="link-info">
+          <span class="link-title">訂閱電子報</span>
+          <span class="link-desc">最新衛教資訊</span>
+        </span>
+        <span class="link-arrow">&rarr;</span>
+      </a>
+      <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">☕</span>
+        <span class="link-info">
+          <span class="link-title">Buy Me a Coffee</span>
+          <span class="link-desc">支持本研究計畫</span>
+        </span>
+        <span class="link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：glm-5-turbo</span>
+    <span><a href="https://github.com/u8901006/postpartum-depression">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
