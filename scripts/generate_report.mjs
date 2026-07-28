@@ -5,8 +5,8 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const API_BASE = process.env.ZHIPU_API_BASE || 'https://open.bigmodel.cn/api/coding/paas/v4';
-const MODEL_CHAIN = ['glm-5-turbo', 'glm-4.7', 'glm-4.7-flash'];
+const API_BASE = 'https://integrate.api.nvidia.com/v1';
+const MODEL_CHAIN = ['nvidia/nemotron-3-super-120b-a12b', 'nvidia/nemotron-3-nano-30b-a3b'];
 
 const PPD_TAGS = [
   '篩檢與診斷', '藥物治療', '心理治療', '神經科學', '生物標記',
@@ -63,7 +63,7 @@ function filterNewPapers(papers, state) {
 
 function parseArgs() {
   const args = process.argv.slice(2);
-  const opts = { input: '', output: '', date: '', apiKey: process.env.ZHIPU_API_KEY || '' };
+  const opts = { input: '', output: '', date: '', apiKey: process.env.NVIDIA_API_KEY || '' };
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--input' && args[i + 1]) opts.input = args[++i];
     if (args[i] === '--output' && args[i + 1]) opts.output = args[++i];
@@ -205,9 +205,9 @@ async function analyzePapers(apiKey, papersData, dateStr) {
               { role: 'system', content: SYSTEM_PROMPT },
               { role: 'user', content: prompt },
             ],
-            temperature: 0.3,
-            top_p: 0.9,
-            max_tokens: 50000,
+            temperature: 1.0,
+            top_p: 0.95,
+            max_tokens: 16384, stream: false, chat_template_kwargs: { enable_thinking: false },
           }),
           signal: AbortSignal.timeout(480000),
         }).catch((err) => {
@@ -423,7 +423,7 @@ function generateHtml(analysis, modelUsed) {
       <div class="header-meta">
         <span class="badge badge-date">\uD83D\uDCC5 ${esc(dateDisplay)}</span>
         <span class="badge badge-count">\uD83D\uDCCA ${totalCount} 篇文獻</span>
-        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
       </div>
     </div>
   </header>
@@ -483,7 +483,7 @@ async function main() {
   const opts = parseArgs();
 
   if (!opts.apiKey) {
-    console.error('[ERROR] No API key. Set ZHIPU_API_KEY env var or use --api-key');
+    console.error('[ERROR] No API key. Set NVIDIA_API_KEY env var or use --api-key');
     process.exit(1);
   }
 
