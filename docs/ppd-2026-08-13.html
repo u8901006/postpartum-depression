@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PPD Research Daily &middot; 產後憂鬱症研究文獻日報 &middot; 2026年8月13日</title>
+<meta name="description" content="2026年8月13日 產後憂鬱症研究文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root{--bg:#f6f1e8;--surface:#fffaf2;--line:#d8c5ab;--text:#2b2118;--muted:#766453;--accent:#8c4f2b;--accent-soft:#ead2bf;--card-bg:color-mix(in srgb,var(--surface) 92%,white)}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(circle at top,#fff6ea 0,var(--bg) 55%,#ead8c6 100%);color:var(--text);font-family:"Noto Sans TC","PingFang TC","Helvetica Neue",Arial,sans-serif;min-height:100vh;overflow-x:hidden}
+  .container{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:60px 32px 80px}
+  header{display:flex;align-items:center;gap:16px;margin-bottom:52px;animation:fadeDown .6s ease both}
+  .logo{width:48px;height:48px;border-radius:14px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 20px rgba(140,79,43,.25)}
+  .header-text h1{font-size:22px;font-weight:700;color:var(--text);letter-spacing:-.3px}
+  .header-meta{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;align-items:center}
+  .badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;letter-spacing:.3px}
+  .badge-date{background:var(--accent-soft);border:1px solid var(--line);color:var(--accent)}
+  .badge-count{background:rgba(140,79,43,.06);border:1px solid var(--line);color:var(--muted)}
+  .badge-source{background:transparent;color:var(--muted);font-size:11px;padding:0 4px}
+  .summary-card{background:var(--card-bg);border:1px solid var(--line);border-radius:24px;padding:28px 32px;margin-bottom:32px;box-shadow:0 20px 60px rgba(61,36,15,.06);animation:fadeUp .5s ease .1s both}
+  .summary-card h2{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--accent);margin-bottom:16px}
+  .summary-text{font-size:15px;line-height:1.8;color:var(--text)}
+  .section{margin-bottom:36px;animation:fadeUp .5s ease both}
+  .section-title{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:700;color:var(--text);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .section-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;background:var(--accent-soft)}
+  .news-card{background:var(--card-bg);border:1px solid var(--line);border-radius:24px;padding:22px 26px;margin-bottom:12px;box-shadow:0 8px 30px rgba(61,36,15,.04);transition:background .2s,border-color .2s,transform .2s}
+  .news-card:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(61,36,15,.08)}
+  .news-card.featured{border-left:3px solid var(--accent)}
+  .news-card.featured:hover{border-color:var(--accent)}
+  .card-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  .rank-badge{background:var(--accent);color:#fff7f0;font-weight:700;font-size:12px;padding:2px 8px;border-radius:6px}
+  .emoji-icon{font-size:18px}
+  .card-header-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .emoji-sm{font-size:14px}
+  .news-card h3{font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.5}
+  .journal-source{font-size:12px;color:var(--accent);margin-bottom:8px;opacity:.8}
+  .news-card p{font-size:13.5px;line-height:1.75;color:var(--muted)}
+  .card-footer{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .tag{padding:2px 9px;background:var(--accent-soft);border-radius:999px;font-size:11px;color:var(--accent)}
+  .news-card a{font-size:12px;color:var(--accent);text-decoration:none;opacity:.7;margin-left:auto}
+  .news-card a:hover{opacity:1}
+  .utility-high{color:#5a7a3a;font-size:11px;font-weight:600;padding:2px 8px;background:rgba(90,122,58,.1);border-radius:4px}
+  .utility-mid{color:#9f7a2e;font-size:11px;font-weight:600;padding:2px 8px;background:rgba(159,122,46,.1);border-radius:4px}
+  .utility-low{color:var(--muted);font-size:11px;font-weight:600;padding:2px 8px;background:rgba(118,100,83,.08);border-radius:4px}
+  .utility-sm{font-size:10px}
+  .pico-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;padding:12px;background:rgba(255,253,249,.8);border-radius:14px;border:1px solid var(--line)}
+  .pico-item{display:flex;gap:8px;align-items:baseline}
+  .pico-label{font-size:10px;font-weight:700;color:#fff7f0;background:var(--accent);padding:2px 6px;border-radius:4px;flex-shrink:0}
+  .pico-text{font-size:12px;color:var(--muted);line-height:1.4}
+  .keywords-section{margin-bottom:36px}
+  .keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .keyword{padding:5px 14px;background:var(--accent-soft);border:1px solid var(--line);border-radius:20px;font-size:12px;color:var(--accent);cursor:default;transition:background .2s}
+  .keyword:hover{background:rgba(140,79,43,.18)}
+  .topic-section{margin-bottom:36px}
+  .topic-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .topic-name{font-size:13px;color:var(--muted);width:100px;flex-shrink:0;text-align:right}
+  .topic-bar-bg{flex:1;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+  .topic-bar{height:100%;background:linear-gradient(90deg,var(--accent),#c47a4a);border-radius:4px;transition:width .6s ease}
+  .topic-count{font-size:12px;color:var(--accent);width:24px}
+  .links-banner{margin-top:48px;animation:fadeUp .5s ease .4s both}
+  .links-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .link-card{display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--card-bg);border:1px solid var(--line);border-radius:24px;text-decoration:none;color:var(--text);transition:all .2s;box-shadow:0 8px 30px rgba(61,36,15,.04)}
+  .link-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 12px 40px rgba(61,36,15,.08)}
+  .link-icon{font-size:28px;flex-shrink:0}
+  .link-info{flex:1}
+  .link-title{font-size:14px;font-weight:700;color:var(--text)}
+  .link-desc{font-size:11px;color:var(--muted);margin-top:2px}
+  .link-arrow{font-size:18px;color:var(--accent);font-weight:700}
+  footer{margin-top:32px;padding-top:22px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);display:flex;justify-content:space-between;animation:fadeUp .5s ease .5s both}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  @keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  @media(max-width:700px){.container{padding:36px 18px 60px}.summary-card,.news-card{padding:20px 18px}.pico-grid{grid-template-columns:1fr}.topic-name{width:70px;font-size:11px}footer{flex-direction:column;gap:6px;text-align:center}.links-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🤱</div>
+    <div class="header-text">
+      <h1>PPD Research Daily &middot; 產後憂鬱症研究文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年8月13日</span>
+        <span class="badge badge-count">📊 13 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦產後憂鬱症的多維度研究，從生物標記（如RAB27B蛋白）到護理流程再造（住院篩檢流程），以及心理社會因素（產後疼痛與憂鬱共病），呈現由基礎科學到臨床實施的完整鏈條，強調早期篩檢、多模式干預與個體化風險評估的重要性。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🏥</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>住院後產後護理流程再造以實現普遍憂鬱症篩檢及早期連結行為健康支持</h3>
+  <p class="journal-source">American journal of perinatology &middot; Redesigning Inpatient Postpartum Care to Achieve Universal Depression Screening and Early Connection to Behavioral Health Support.</p>
+  <p>透過護理主導的住院後工作流程重新設計，顯著提升產後憂鬱症普遍篩檢率並改善行為健康服務的轉介，證明系統層面介入可有效彌合產後心理健康照護的落差。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">2024年2月至6月在都市學術醫院分娩的產後婦女</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">護理主導的產後住院工作流程，包含標準化憂鬱症篩檢及行為健康轉介協議</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">流程再造前的常規照護（歷史對照組）</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">普遍產後憂鬱症篩檢率顯著增加，行為健康轉介完成率提升</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">篩檢與診斷</span><span class="tag">護理與助產</span><span class="tag">公共衛生</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42586525/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">🔬</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>跨組織Mendelian隨機化研究優先鑑定RAB27B為產後憂鬱症的腦源性候選蛋白質</h3>
+  <p class="journal-source">European archives of psychiatry and clinical neuroscience &middot; Cross-tissue Mendelian randomization prioritizes RAB27B as a brain-derived candidate protein for postpartum depression.</p>
+  <p>透過跨組織proteogenomic資料整合與Mendelian隨機化分析，識別出RAB27B為連接遺傳風險與產後憂鬱症發病機制的關鍵腦源性蛋白質，為生物標記與治療靶標提供新方向。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">產後憂鬱症相關的基因組學與蛋白質組學數據（來源於GWAS及組織特異性QTL）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">跨組織Mendelian隨機化分析（利用cis-protein QTL工具變數）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">未顯著相關的其他蛋白質質點</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">RAB27B被優先鑑定為具有因果關聯的產後憂鬱症候選腦源性蛋白質</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">神經科學</span><span class="tag">生物標記</span><span class="tag">系統性回顧</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42584685/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">💬</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>產後疼痛與憂鬱症狀的雙重體驗：一項質性研究</h3>
+  <p class="journal-source">The Canadian journal of nursing research = Revue canadienne de recherche en sciences infirmieres &middot; The Dual Experience of Postpartum Pain and Depressive Symptoms: A Qualitative Study.</p>
+  <p>揭示產後疼痛與憂鬱症狀如何共同干擾產婦的自我照護與嬰兒照顧功能，強調需整合疼痛管理與心理支持以提升母嬰照護品質。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">經歷產後疼痛與憂鬱症狀的新手父母（以母親為主）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">質性訪談探索其共病體驗對自我照護、嬰兒照顧及所需資源的影響</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無（質性研究，探索性闡釋）</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">產後疼痛與憂鬱共病顯著加重功能障礙，減少自我照護能力，並增加對專業支持與實用資源的需求</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">心理治療</span><span class="tag">護理與助產</span><span class="tag">母嬰關係</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42585538/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">⚠️</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>不良產褥事件與女性退伍軍人產後憂鬱症與焦慮症的關聯</h3>
+  <p class="journal-source">Journal of mood and anxiety disorders &middot; Adverse perinatal events are associated with postpartum depression and anxiety in women veterans.</p>
+  <p>在女性退伍軍人中，早產與緊急帝王剖等不良產褥事件顯著增加產後憂鬱症與焦慮症風險，提示此群體需加強產後心理健康篩檢與支援。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">國家調查中報告過往懷孕經驗的女性退伍軍人</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">自我報告的不良產褥事件（早產、低出生體重、緊急帝王剖）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">未經歷該等不良事件的產後女性退伍軍人</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">不良產褥事件與較高產後憂鬱症及焦慮症風險顯著相關</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">流行病學</span><span class="tag"> społeczno-kulturowe czynniki</span><span class="tag">護理與助產</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42548998/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">⚖️</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>唾液皮質醇、黃體酮與雌二醇在產期間及產後的變化與憂鬱症狀的關聯</h3>
+  <p class="journal-source">Psychoneuroendocrinology &middot; Salivary cortisol, progesterone, and estradiol levels across the perinatal period and associations with depressive symptoms.</p>
+  <p>系統追蹤產期間激素變化，發現皮質醇、黃體酮與雌二醇的動態變化模式與產後憂鬱症狀具有複雜且時點依賴的關聯，挑戰單一激素解釋模型。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">產期間及產後追蹤的產婦樣本</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">縱向測量唾液皮質醇、黃體酮、雌二醇水平</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同產程時點的激素濃度</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">激素水平與憂鬱症狀的關聯具時點特異性，且多激素交互作用顯著</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">神經科學</span><span class="tag">生物標記</span><span class="tag">睡眠醫學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42526187/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#6</span>
+    <span class="emoji-icon">💊</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>子宮內藥物治療：懷孕期間憂鬱症與SSRI使用——優先考慮母體心理健康</h3>
+  <p class="journal-source">JAMA psychiatry &middot; Depression and SSRI Treatment During Pregnancy-Prioritizing Maternal Mental Health.</p>
+  <p>強調在懷孕期間治療重度憂鬱症（主要透過SSRI）對改善母嬰、家庭與社區結果的關鍵重要性，倡導將母體心理健康置於產前照護優先序。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">懷孕期間被診斷為重度憂鬱症的患者</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">選擇性血清素再攝取抑制劑（SSRI）治療</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">未接受藥物治療的重度憂鬱症孕婦</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">SSRI治療與改善母體心理健康及降低產後不良事件風險相關</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">藥物治療</span><span class="tag">公共衛生</span><span class="tag">母嬰關係</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42584886/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#7</span>
+    <span class="emoji-icon">🦠</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>洛氏乳酸桿菌reuteri用於促進母嬰結合與產後憂鬱症高風險婦女社會情感功能的隨機對照試驗設計</h3>
+  <p class="journal-source">Contemporary clinical trials &middot; Rationale, design, and statistical analysis plan for a randomized, double-blind, placebo-controlled trial of Limosilactobacillus reuteri to support mother-infant bonding and maternal socioemotional functioning in postpartum women at increased risk for postpartum depression.</p>
+  <p>闡明一項設計嚴謹的雙盲安慰劑對照試驗，以驗證益生菌L. reuteri透過腦腸軸調節內源性催產素是否能改善高風險產後婦女的母嬰結合與社會情感功能。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">產後且具備發展產後憂鬱症高風險的婦女</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">Limosilactobacillus reuteri 口腔給藥</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">安慰劑對照</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">母嬰結合行為、母親社會情感功能及潛在催產素通路激活（預計主要結束點）</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">營養與生活方式</span><span class="tag">母嬰關係</span><span class="tag">神經科學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42398703/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#8</span>
+    <span class="emoji-icon">🧬</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>miR-218-5p在產後憂鬱症發病機制中的表達與功能：潛在生物標記與調節角色</h3>
+  <p class="journal-source">Psychiatric genetics &middot; Expression and function of miR-218-5p in the pathogenesis of postpartum depression.</p>
+  <p>探討微RNA-218-5p作為產後憂鬱症潛在生物標記的表達變化，並初步闡釋其在調節類憂鬱行為、發炎與氧化壓力中的可能角色，為診斷與機制研究提供新線索。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">產後婦女樣本（含憂鬱症組與對照組）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">測量miR-218-5p表達水平</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">產後憂鬱症患者 vs 健康對照產後婦女</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">miR-218-5p表達異常，並與類憂鬱行為、發炎及氧化壓力通路相關</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">生物標記</span><span class="tag">篩檢與診斷</span><span class="tag">分子醫學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42233685/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div></div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🐭</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>產後資源匱乏與逆境擾亂母性行為但不改變焦慮類行為或認知</h3>
+  <p class="journal-source">Behavioural brain research</p>
+  <p>動物模型顯示產後資源短缺會特異性地損害母性照護行為，而不影響焦慮或認知功能，提示逆境對母嬰互動的影響具備行為特異性。</p>
+  <div class="card-footer">
+    <span class="tag">母嬰關係</span><span class="tag">神經科學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42456812/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧬</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>母親童年虐待經驗與新生兒端粒長度：懷孕期間困擾與皮質醇作為潛在機制</h3>
+  <p class="journal-source">Psychoneuroendocrinology</p>
+  <p>追蹤研究發現母親童年創傷經驗與新生兒端粒縮短相關，懷孕期間的心理困擾與升高皮質醇可能作為此跨世代影響的生理中介路徑。</p>
+  <div class="card-footer">
+    <span class="tag">流行病學</span><span class="tag">神經科學</span><span class="tag">社會文化因素</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42456502/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🥛</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>牛磺酸調節海馬BDNF/TrkB/ERK1/CREB訊號傳導及早期生活忽視模型中的行為結果</h3>
+  <p class="journal-source">Behavioural brain research</p>
+  <p>在早期生活忽視的動物模型中，牛磺酸被發現能調節關鍵神經營養訊號路徑並改善行為表現，提示其可能具備神經保護與修復潛力。</p>
+  <div class="card-footer">
+    <span class="tag">營養與生活方式</span><span class="tag">神經科學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42431380/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧘</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>懷孕期間正念導向計畫與標準治療隨訪的隨機對照試驗：對母體心理健康、嬰兒結果及母嬰依附的影響</h3>
+  <p class="journal-source">Contemporary clinical trials</p>
+  <p>比較孕期正念干預與常規照顧，評估其對降低甄前憂鬱焦慮、改善母嬰依附及嬰兒結果的效果，雖顯示正向趨勢但結論仍需最終結果。</p>
+  <div class="card-footer">
+    <span class="tag">心理治療</span><span class="tag">孕產照護</span><span class="tag">母嬰關係</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42419504/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🚨</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>獻嬰文獻概覽：因精神疾病導致的 filicide（親子殺人）</h3>
+  <p class="journal-source">Medicine, science, and the law</p>
+  <p>透過文獻計量分析3674篇資料，證實精神疾病（尤其是憂鬱症）是導致 filicide 的重要原因之一，強調產後嚴重憂鬱症需警惕罕見但致命的惡性轉歸。</p>
+  <div class="card-footer">
+    <span class="tag">公共衛生</span><span class="tag">系統性回顧</span><span class="tag">社會文化因素</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42585346/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div></div>
+
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+  <span class="topic-name">篩檢與診斷</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+  <span class="topic-count">4</span>
+</div><div class="topic-row">
+  <span class="topic-name">藥物治療</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+  <span class="topic-count">2</span>
+</div><div class="topic-row">
+  <span class="topic-name">心理治療</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+  <span class="topic-count">3</span>
+</div><div class="topic-row">
+  <span class="topic-name">神經科學</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+  <span class="topic-count">6</span>
+</div><div class="topic-row">
+  <span class="topic-name">生物標記</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+  <span class="topic-count">4</span>
+</div><div class="topic-row">
+  <span class="topic-name">營養與生活方式</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+  <span class="topic-count">3</span>
+</div><div class="topic-row">
+  <span class="topic-name">母嬰關係</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:83%"></div></div>
+  <span class="topic-count">5</span>
+</div><div class="topic-row">
+  <span class="topic-name">嬰兒發展</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+  <span class="topic-count">2</span>
+</div><div class="topic-row">
+  <span class="topic-name">社會文化因素</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+  <span class="topic-count">3</span>
+</div><div class="topic-row">
+  <span class="topic-name">流行病學</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+  <span class="topic-count">3</span>
+</div><div class="topic-row">
+  <span class="topic-name">護理與助產</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+  <span class="topic-count">4</span>
+</div><div class="topic-row">
+  <span class="topic-name">伴侶與家庭</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:17%"></div></div>
+  <span class="topic-count">1</span>
+</div><div class="topic-row">
+  <span class="topic-name">數位介入</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:0%"></div></div>
+  <span class="topic-count">0</span>
+</div><div class="topic-row">
+  <span class="topic-name">公共衛生</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+  <span class="topic-count">4</span>
+</div><div class="topic-row">
+  <span class="topic-name">系統性回顧</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+  <span class="topic-count">2</span>
+</div><div class="topic-row">
+  <span class="topic-name">母乳哺餵</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:0%"></div></div>
+  <span class="topic-count">0</span>
+</div><div class="topic-row">
+  <span class="topic-name">睡眠醫學</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:17%"></div></div>
+  <span class="topic-count">1</span>
+</div><div class="topic-row">
+  <span class="topic-name">助生殖與不孕</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:0%"></div></div>
+  <span class="topic-count">0</span>
+</div><div class="topic-row">
+  <span class="topic-name">兒少精神醫學</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:0%"></div></div>
+  <span class="topic-count">0</span>
+</div><div class="topic-row">
+  <span class="topic-name">跨文化研究</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:0%"></div></div>
+  <span class="topic-count">0</span>
+</div></div>
+
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">產後憂鬱症</span><span class="keyword">篩檢</span><span class="keyword">生物標記</span><span class="keyword">護理流程</span><span class="keyword">心理社會因素</span><span class="keyword">催產素</span><span class="keyword">益生菌</span><span class="keyword">微RNA</span></div></div>
+
+  <div class="links-banner">
+    <div class="links-grid">
+      <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">🏥</span>
+        <span class="link-info">
+          <span class="link-title">李政洋身心診所</span>
+          <span class="link-desc">診所首頁</span>
+        </span>
+        <span class="link-arrow">&rarr;</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">📰</span>
+        <span class="link-info">
+          <span class="link-title">訂閱電子報</span>
+          <span class="link-desc">最新衛教資訊</span>
+        </span>
+        <span class="link-arrow">&rarr;</span>
+      </a>
+      <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">☕</span>
+        <span class="link-info">
+          <span class="link-title">Buy Me a Coffee</span>
+          <span class="link-desc">支持本研究計畫</span>
+        </span>
+        <span class="link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/postpartum-depression">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
