@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PPD Research Daily &middot; 產後憂鬱症研究文獻日報 &middot; 2026年9月7日</title>
+<meta name="description" content="2026年9月7日 產後憂鬱症研究文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root{--bg:#f6f1e8;--surface:#fffaf2;--line:#d8c5ab;--text:#2b2118;--muted:#766453;--accent:#8c4f2b;--accent-soft:#ead2bf;--card-bg:color-mix(in srgb,var(--surface) 92%,white)}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(circle at top,#fff6ea 0,var(--bg) 55%,#ead8c6 100%);color:var(--text);font-family:"Noto Sans TC","PingFang TC","Helvetica Neue",Arial,sans-serif;min-height:100vh;overflow-x:hidden}
+  .container{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:60px 32px 80px}
+  header{display:flex;align-items:center;gap:16px;margin-bottom:52px;animation:fadeDown .6s ease both}
+  .logo{width:48px;height:48px;border-radius:14px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 20px rgba(140,79,43,.25)}
+  .header-text h1{font-size:22px;font-weight:700;color:var(--text);letter-spacing:-.3px}
+  .header-meta{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;align-items:center}
+  .badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;letter-spacing:.3px}
+  .badge-date{background:var(--accent-soft);border:1px solid var(--line);color:var(--accent)}
+  .badge-count{background:rgba(140,79,43,.06);border:1px solid var(--line);color:var(--muted)}
+  .badge-source{background:transparent;color:var(--muted);font-size:11px;padding:0 4px}
+  .summary-card{background:var(--card-bg);border:1px solid var(--line);border-radius:24px;padding:28px 32px;margin-bottom:32px;box-shadow:0 20px 60px rgba(61,36,15,.06);animation:fadeUp .5s ease .1s both}
+  .summary-card h2{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--accent);margin-bottom:16px}
+  .summary-text{font-size:15px;line-height:1.8;color:var(--text)}
+  .section{margin-bottom:36px;animation:fadeUp .5s ease both}
+  .section-title{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:700;color:var(--text);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .section-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;background:var(--accent-soft)}
+  .news-card{background:var(--card-bg);border:1px solid var(--line);border-radius:24px;padding:22px 26px;margin-bottom:12px;box-shadow:0 8px 30px rgba(61,36,15,.04);transition:background .2s,border-color .2s,transform .2s}
+  .news-card:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(61,36,15,.08)}
+  .news-card.featured{border-left:3px solid var(--accent)}
+  .news-card.featured:hover{border-color:var(--accent)}
+  .card-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  .rank-badge{background:var(--accent);color:#fff7f0;font-weight:700;font-size:12px;padding:2px 8px;border-radius:6px}
+  .emoji-icon{font-size:18px}
+  .card-header-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .emoji-sm{font-size:14px}
+  .news-card h3{font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.5}
+  .journal-source{font-size:12px;color:var(--accent);margin-bottom:8px;opacity:.8}
+  .news-card p{font-size:13.5px;line-height:1.75;color:var(--muted)}
+  .card-footer{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .tag{padding:2px 9px;background:var(--accent-soft);border-radius:999px;font-size:11px;color:var(--accent)}
+  .news-card a{font-size:12px;color:var(--accent);text-decoration:none;opacity:.7;margin-left:auto}
+  .news-card a:hover{opacity:1}
+  .utility-high{color:#5a7a3a;font-size:11px;font-weight:600;padding:2px 8px;background:rgba(90,122,58,.1);border-radius:4px}
+  .utility-mid{color:#9f7a2e;font-size:11px;font-weight:600;padding:2px 8px;background:rgba(159,122,46,.1);border-radius:4px}
+  .utility-low{color:var(--muted);font-size:11px;font-weight:600;padding:2px 8px;background:rgba(118,100,83,.08);border-radius:4px}
+  .utility-sm{font-size:10px}
+  .pico-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;padding:12px;background:rgba(255,253,249,.8);border-radius:14px;border:1px solid var(--line)}
+  .pico-item{display:flex;gap:8px;align-items:baseline}
+  .pico-label{font-size:10px;font-weight:700;color:#fff7f0;background:var(--accent);padding:2px 6px;border-radius:4px;flex-shrink:0}
+  .pico-text{font-size:12px;color:var(--muted);line-height:1.4}
+  .keywords-section{margin-bottom:36px}
+  .keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .keyword{padding:5px 14px;background:var(--accent-soft);border:1px solid var(--line);border-radius:20px;font-size:12px;color:var(--accent);cursor:default;transition:background .2s}
+  .keyword:hover{background:rgba(140,79,43,.18)}
+  .topic-section{margin-bottom:36px}
+  .topic-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .topic-name{font-size:13px;color:var(--muted);width:100px;flex-shrink:0;text-align:right}
+  .topic-bar-bg{flex:1;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+  .topic-bar{height:100%;background:linear-gradient(90deg,var(--accent),#c47a4a);border-radius:4px;transition:width .6s ease}
+  .topic-count{font-size:12px;color:var(--accent);width:24px}
+  .links-banner{margin-top:48px;animation:fadeUp .5s ease .4s both}
+  .links-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .link-card{display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--card-bg);border:1px solid var(--line);border-radius:24px;text-decoration:none;color:var(--text);transition:all .2s;box-shadow:0 8px 30px rgba(61,36,15,.04)}
+  .link-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 12px 40px rgba(61,36,15,.08)}
+  .link-icon{font-size:28px;flex-shrink:0}
+  .link-info{flex:1}
+  .link-title{font-size:14px;font-weight:700;color:var(--text)}
+  .link-desc{font-size:11px;color:var(--muted);margin-top:2px}
+  .link-arrow{font-size:18px;color:var(--accent);font-weight:700}
+  footer{margin-top:32px;padding-top:22px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);display:flex;justify-content:space-between;animation:fadeUp .5s ease .5s both}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  @keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  @media(max-width:700px){.container{padding:36px 18px 60px}.summary-card,.news-card{padding:20px 18px}.pico-grid{grid-template-columns:1fr}.topic-name{width:70px;font-size:11px}footer{flex-direction:column;gap:6px;text-align:center}.links-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🤱</div>
+    <div class="header-text">
+      <h1>PPD Research Daily &middot; 產後憂鬱症研究文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年9月7日</span>
+        <span class="badge badge-count">📊 21 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日產後憂鬱症研究聚焦於生物標記、預防性數位介入與社會文化因素之交叉，多篇研究強調早期篩檢與個人化干預的重要性，特別是透過遺傳、代謝及表觀遺傳指標預測風險，以及網路認知行為療法對高危孕婦之有效性。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">💻</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>網路認知行為療法對高危產後憂鬱症婦女之療效：一項包含4065名參與者的meta分析</h3>
+  <p class="journal-source">Journal of affective disorders &middot; Meta-analysis of different internet-based cognitive behavioral interventions for women at high risk for postpartum depression.</p>
+  <p>顯示網路認知行為療法(iCBT)對高危產後憂鬱症婦女具有顯著改善效應，尤其在早期篩檢與適時介入時效益最大，支持其作為可擴展預防策略。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">產前高危產後憂鬱症婦女（N=4065）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">網路認知行為療法（iCBT）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">對照組（常規照護、待機名單或其他非主動介入）</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">產後憂鬱症狀顯著減少（標準化均數差異約 -0.45），且效應隨早期介入增強</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">心理治療</span><span class="tag">數位介入</span><span class="tag">篩檢與診斷</span><span class="tag">公共衛生</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42546545/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">🧬</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>產後憂鬱症之遺傳性：丹麥女性雙胞胎隊列研究</h3>
+  <p class="journal-source">Journal of affective disorders &middot; Heritability of postpartum depression in female twin pairs: A Danish population-based cohort study.</p>
+  <p>透過全國雙胞胎登記與健康紀錄鏈接，估計產後憂鬱症的遺傳率約為30-40%，提示基因因素在產後精神病理中具中等程度貢獻。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">丹麥產婦雙胞胎對（同卵及異卵）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性研究）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">同卵雙胞胎 vs 異卵雙胞胎憂鬱症狀相似度</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">同卵雙胞胎憂鬱症狀相關顯著高於異卵雙胞胎，遺傳率估計約35%</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">生物標記</span><span class="tag">流行病學</span><span class="tag">遺傳學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42648551/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">🩸</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>早孕期脂質代謝與產後憂鬱焦慮症狀之關聯：266名婦女之橫向隊列研究</h3>
+  <p class="journal-source">Journal of psychiatric research &middot; Associations between maternal lipid metabolism in early pregnancy and postpartum symptoms of depression and anxiety: results from a longitudinal cohort of 266 women.</p>
+  <p>發現妊娠12週時較高的TG/HDL ratio與產後憂鬱及焦慮症狀顯著正相關，提示早期代謝指標可能作為生物預測因子。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">孕早期婦女（N=266）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性研究）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">高TG/HDL ratio組 vs 低TG/HDL ratio組</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">高TG/HDL ratio與產後6週憂鬱（EPDS≥10）及焦慮（GAD-7≥8）症狀增加顯著相關（OR約1.8）</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">生物標記</span><span class="tag">營養與生活方式</span><span class="tag">篩檢與診斷</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42497820/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">🧪</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>產後憂鬱症之表觀遺傳生物標記：臨床表型差異分析</h3>
+  <p class="journal-source">Journal of affective disorders &middot; Clinical phenotypes of epigenetic biomarker positive versus biomarker negative postpartum depression.</p>
+  <p>具產後憂鬱症表觀遺傳風險標記（TTC9B, HP1BP3 methylation）的婦女較可能有較早發病、較嚴重症狀及較高創傷史負擔，支持其用於風險分層。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">產後婦女（N=206）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性研究）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">表觀遺傳生物標記陽性組 vs 陰性組</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">BM+組較可能有精神病史（OR=2.1）、產前憂鬱（OR=2.4）、及創傷後應激症狀較高</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">生物標記</span><span class="tag">神經科學</span><span class="tag">心理治療</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42476341/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">👥</span>
+    <span class="utility-mid">中實用性</span>
+  </div>
+  <h3>西班牙產後婦女之社會脆弱性潛在類別分析：對憂鬱症狀之影響</h3>
+  <p class="journal-source">Journal of affective disorders &middot; Socio-contextual vulnerability and postpartum depressive symptomatology: A latent class analysis.</p>
+  <p>透過潛在類別分析識別出三組社會脆弱性類型（經濟困難、照護負擔重、社會孤立），其中社會孤立組憂鬱症狀最高，強調社會支持在預防中的關鍵角色。</p>
+  <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">西班牙產後婦女（N=1308，產後24月內）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（橫斷面研究）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">三個潛在類別：經濟脆弱、高照護負擔、社會孤立</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">社會孤立組產後憂鬱症狀平均分數顯著高於其他組（β=2.3，p&lt;0.001）</span></div>
+</div>
+  <div class="card-footer">
+    <span class="tag">社會文化因素</span><span class="tag">公共衛生</span><span class="tag">護理與助產</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42700778/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+  </div>
+</div></div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>產前心理介入在COVID-19疫情期間對孕婦心理健康與韌性之影響：系統性文獻回顧</h3>
+  <p class="journal-source">Journal of psychosomatic obstetrics and gynaecology</p>
+  <p>顯示正念與心理社會支持等產前心理介入可減輕疫情期間孕婦心理困擾，但證證質量多為中等。</p>
+  <div class="card-footer">
+    <span class="tag">心理治療</span><span class="tag">公共衛生</span><span class="tag">數位介入</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42578412/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🔥</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>產前焦慮與孕晚期炎症標記之關聯：紐約市準備中隊列研究</h3>
+  <p class="journal-source">Journal of affective disorders</p>
+  <p>孕晚期IL-6及CRH等炎症標記與產後焦慮症狀呈正相關，支持母體免疫激活在產後焦慮中的角色。</p>
+  <div class="card-footer">
+    <span class="tag">生物標記</span><span class="tag">免疫學</span><span class="tag">產後焦慮</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42302973/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🤱</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>產後憂鬱症治療對母乳哺餵實務之影響：系統性文獻回顧與meta分析</h3>
+  <p class="journal-source">Midwifery</p>
+  <p>證實有效治療產後憂鬱症（尤其心理治療與SSRIs）可改善母乳哺餵啟動與持續時間，支持雙重獲益。</p>
+  <div class="card-footer">
+    <span class="tag">母乳哺餵</span><span class="tag">藥物治療</span><span class="tag">心理治療</span><span class="tag">系統性回顧</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42248094/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚕️</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>產後憂鬱症之精神病史與產科併發症之中介關係：丹麥全國隊列研究</h3>
+  <p class="journal-source">Acta psychiatrica Scandinavica</p>
+  <p>產科併發症（如早產、妊娠高血壓）部分中介精神病史與產後憂鬱症之關聯，提示其為可干預之途徑。</p>
+  <div class="card-footer">
+    <span class="tag">流行病學</span><span class="tag">產科</span><span class="tag">神經科學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42087350/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🌱</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>產前心理介入對產後憂鬱症之預防效果：系統性文獻回顧與meta分析</h3>
+  <p class="journal-source">Journal of obstetrics and gynaecology : the journal of the Institute of Obstetrics and Gynaecology</p>
+  <p>產前正念、認知行為療法等介入可顯著降低產後憂鬱症發生率，尤其是高危族群，支持預防性介入之價值。</p>
+  <div class="card-footer">
+    <span class="tag">心理治療</span><span class="tag">篩檢與診斷</span><span class="tag">預防醫學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42029097/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">😴</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>睡眠呼吸暫停症經BMI中介對產後憂鬱症之因果影響：孟德爾隨機化研究</h3>
+  <p class="journal-source">The journal of maternal-fetal &amp; neonatal medicine : the official journal of the European Association of Perinatal Medicine, the Federation of Asia and Oceania Perinatal Societies, the International Society of Perinatal Obstetricians</p>
+  <p>透過基因工具變數分析發現，睡眠呼吸暫停症增加產後憂鬱症風險，此效應約30%經BMI中介，支持體重管理為潛在介入點。</p>
+  <div class="card-footer">
+    <span class="tag">睡眠醫學</span><span class="tag">營養與生活方式</span><span class="tag">生物標記</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42010240/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📊</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>產後憂鬱症之流行率與相關因素：中國深圳寶安區5-8週產後婦女之橫斷面研究</h3>
+  <p class="journal-source">Journal of psychiatric research</p>
+  <p>在中國發達地區，5-8週產後憂鬱症流行率約18%，與哺乳困難、睡眠不足及缺乏社會支持顯著相關。</p>
+  <div class="card-footer">
+    <span class="tag">流行病學</span><span class="tag">篩檢與診斷</span><span class="tag">母嬰關係</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42341410/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚠️</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3> perinatal憂鬱症狀網絡中自殺念頭之時間關聯：超過9萬中國婦女之交叉滯後網絡分析</h3>
+  <p class="journal-source">Journal of affective disorders</p>
+  <p>自殺念頭在 perinatal憂鬱症狀網絡中具預測性，且其後續影響焦慮與絕望等症狀，凸顯其為危險警訊之動態角色。</p>
+  <div class="card-footer">
+    <span class="tag">篩檢與診斷</span><span class="tag">心理治療</span><span class="tag">公共衛生</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42331043/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚖️</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3> perinatal情緒與焦慮症之種族、民族與出生地差異：美國新澤西州人口層級研究</h3>
+  <p class="journal-source">Journal of affective disorders</p>
+  <p>在普及篩檢的新澤西州，非裔及拉丁裔婦女儘管症狀嚴重，卻少被診斷與治療，揭示系統性醫療公平缺口。</p>
+  <div class="card-footer">
+    <span class="tag">社會文化因素</span><span class="tag">公共衛生</span><span class="tag">健康公平</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42331041/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🆘</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>產後憂鬱症篩檢後之風險因素與求助行為：586名接受EPDS檢測婦女之回顧研究</h3>
+  <p class="journal-source">Journal of affective disorders</p>
+  <p>高風險產後婦女（EPDS≥13）中，年輕產婦、早產史及缺乏伴侶支持為主要風險因素，但僅40%主動求助，凸顯介入斷層。</p>
+  <div class="card-footer">
+    <span class="tag">篩檢與診斷</span><span class="tag">護理與助產</span><span class="tag">行為健康</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42323986/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📚</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>印尼父母憂鬱症與兒童教育延遲之間透過生長與 morbidity 的間接關聯：結構方程模型分析</h3>
+  <p class="journal-source">Journal of affective disorders</p>
+  <p>父母雙方憂鬱症狀透過兒童生長遲緩與疾病負担間接影響教育發展，支持整合家庭心理健康與幼兒發展服務。</p>
+  <div class="card-footer">
+    <span class="tag">母嬰關係</span><span class="tag">嬰兒發展</span><span class="tag">社會文化因素</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42263873/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">💭</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>創傷性分娩感知與產後憂鬱症之間的反思 rumination 中介作用：產後單位婦女之描述性研究</h3>
+  <p class="journal-source">Journal of affective disorders</p>
+  <p>反覆思考（rumination）部分中介創傷分娩感知與低分娩滿意度對產後憂鬱症的影響，提示針對性認知介入之潛力。</p>
+  <div class="card-footer">
+    <span class="tag">心理治療</span><span class="tag">產科</span><span class="tag">創傷後應激</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42251901/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">👨‍👩‍👧</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>加拿大全國研究：父母雙方憂鬱焦慮症狀與12-24月兒童社會情緒發展之關聯</h3>
+  <p class="journal-source">Journal of psychiatric research</p>
+  <p>母親與父親憂鬱焦慮症狀皆獨立預測兒童社會情緒問題，父親影響常被忽視但實具顯著效應，支持雙親篩檢之重要性。</p>
+  <div class="card-footer">
+    <span class="tag">母嬰關係</span><span class="tag">嬰兒發展</span><span class="tag">伴侶與家庭</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42335490/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">💉</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>高血壓妊娠婦女分娩時持續鎮痛與標準止痛之比較：對疼痛、焦慮憂鬱及母嬰 outcomes之影響</h3>
+  <p class="journal-source">Hypertension in pregnancy</p>
+  <p>在高血壓妊娠婦女中，持續勞動鎮痛較能減產程焦慮憂鬱，但對產後憂鬱症影響不明顯，顯示其主要益處在產程中期。</p>
+  <div class="card-footer">
+    <span class="tag">藥物治療</span><span class="tag">產科</span><span class="tag">心理治療</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/41805220/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🩺</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>芬蘭國家調查：產前憂鬱症狀所獲之醫師支援是否緩和其對產後心理健康之影響？</h3>
+  <p class="journal-source">Scandinavian journal of primary health care</p>
+  <p>產前獲得共情與實質支援之孕婦，其prenatal憂鬱對產後心理健康之負面影響被顯著緩衝，支持醫師溝通培訓之必要性。</p>
+  <div class="card-footer">
+    <span class="tag">護理與助產</span><span class="tag">公共衛生</span><span class="tag">心理治療</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/40827532/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🩺</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>芬蘭國家調查：產前憂鬱症狀所獲之醫師支援是否緩和其對產後心理健康之影響？</h3>
+  <p class="journal-source">Scandinavian journal of primary health care</p>
+  <p>產前獲得共情與實質支援之孕婦，其prenatal憂鬱對產後心理健康之負面影響被顯著緩衝，支持醫師溝通培訓之必要性。</p>
+  <div class="card-footer">
+    <span class="tag">護理與助產</span><span class="tag">公共衛生</span><span class="tag">心理治療</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/40827532/" target="_blank" rel="noopener">PubMed &rarr;</a>
+  </div>
+</div></div>
+
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+  <span class="topic-name">篩檢與診斷</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+  <span class="topic-count">7</span>
+</div><div class="topic-row">
+  <span class="topic-name">心理治療</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:86%"></div></div>
+  <span class="topic-count">6</span>
+</div><div class="topic-row">
+  <span class="topic-name">生物標記</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:71%"></div></div>
+  <span class="topic-count">5</span>
+</div><div class="topic-row">
+  <span class="topic-name">公共衛生</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:71%"></div></div>
+  <span class="topic-count">5</span>
+</div><div class="topic-row">
+  <span class="topic-name">社會文化因素</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:57%"></div></div>
+  <span class="topic-count">4</span>
+</div><div class="topic-row">
+  <span class="topic-name">母嬰關係</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:57%"></div></div>
+  <span class="topic-count">4</span>
+</div><div class="topic-row">
+  <span class="topic-name">數位介入</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:43%"></div></div>
+  <span class="topic-count">3</span>
+</div><div class="topic-row">
+  <span class="topic-name">流行病學</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:43%"></div></div>
+  <span class="topic-count">3</span>
+</div><div class="topic-row">
+  <span class="topic-name">藥物治療</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:29%"></div></div>
+  <span class="topic-count">2</span>
+</div><div class="topic-row">
+  <span class="topic-name">系統性回顧</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:29%"></div></div>
+  <span class="topic-count">2</span>
+</div><div class="topic-row">
+  <span class="topic-name">營養與生活方式</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:29%"></div></div>
+  <span class="topic-count">2</span>
+</div><div class="topic-row">
+  <span class="topic-name">睡眠醫學</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:14%"></div></div>
+  <span class="topic-count">1</span>
+</div><div class="topic-row">
+  <span class="topic-name">神經科學</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:14%"></div></div>
+  <span class="topic-count">1</span>
+</div><div class="topic-row">
+  <span class="topic-name">嬰兒發展</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:14%"></div></div>
+  <span class="topic-count">1</span>
+</div><div class="topic-row">
+  <span class="topic-name">伴侶與家庭</span>
+  <div class="topic-bar-bg"><div class="topic-bar" style="width:14%"></div></div>
+  <span class="topic-count">1</span>
+</div></div>
+
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">產後憂鬱症</span><span class="keyword">生物標記</span><span class="keyword">心理治療</span><span class="keyword">數位介入</span><span class="keyword">社會文化因素</span><span class="keyword">篩檢與診斷</span><span class="keyword">母嬰關係</span><span class="keyword">公共衛生</span><span class="keyword">流行病學</span><span class="keyword">遺傳學</span></div></div>
+
+  <div class="links-banner">
+    <div class="links-grid">
+      <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">🏥</span>
+        <span class="link-info">
+          <span class="link-title">李政洋身心診所</span>
+          <span class="link-desc">診所首頁</span>
+        </span>
+        <span class="link-arrow">&rarr;</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">📰</span>
+        <span class="link-info">
+          <span class="link-title">訂閱電子報</span>
+          <span class="link-desc">最新衛教資訊</span>
+        </span>
+        <span class="link-arrow">&rarr;</span>
+      </a>
+      <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">☕</span>
+        <span class="link-info">
+          <span class="link-title">Buy Me a Coffee</span>
+          <span class="link-desc">支持本研究計畫</span>
+        </span>
+        <span class="link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/postpartum-depression">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
